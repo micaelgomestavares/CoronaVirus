@@ -2,6 +2,8 @@
 ```
 EXPRESS
 CHART.JS
+EJS
+BOOSTRAP-COUNTRY-PICKER
 ``` 
 <br>
 :rocket:  Install all packages of the `package.json` on your Node project. This will download everything you need.
