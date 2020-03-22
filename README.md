@@ -1,6 +1,6 @@
 ## 📦 Dependencies
 ```
-EJS
+EXPRESS
 CHART.JS
 ``` 
 <br>
