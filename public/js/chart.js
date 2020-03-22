@@ -1,8 +1,5 @@
-// Váriaveis que são pegas do HTML.
 let select;
 let value;
-
-// É o PAÍS pego do JSON.
 let text;
 
 // Váriaveis que guardam os valores de casos totais e das mortes.
@@ -10,11 +7,10 @@ let cases;
 let deaths;
 let recovered;
 
-
 // Váriavel que guarda o gráfico criado.
 var myChart;
 
-// Váriavel para desbugar os gráficos.
+// Váriavel para desbugar os gráficos
 let tam = 0;
 
 $(document).ready(function () {

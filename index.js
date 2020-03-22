@@ -1,9 +1,9 @@
-let express = require('express'); // Importando o EXPRESS
-let app = express(); // Instanciando/Iniciando o EXPRESS
+let express = require('express');
+let app = express();
 
 
-app.set('view engine', 'ejs'); // Dizendo que é para o express usar o EJS como view engine.
-app.use(express.static('public')); // Dizendo ao backcend quais são os arquivos estáticos
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.get("/", function (req, res) {
     res.render("home");
