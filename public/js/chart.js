@@ -36,7 +36,7 @@ function catchCountryID() {
         container.src = `${countryFlag}`;
 
     }).catch(function (error) {
-        console.log("Houve um erro ao tentar localizar o ALPHA2CODE");
+        console.log(`Houve um erro ao tentar localizar o Alphs2Code do país: ${countryName}`);
         container.src = `img/coronavirus.png`;
     });
 }
