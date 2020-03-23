@@ -1,3 +1,4 @@
+let ejs = require('ejs');
 let express = require('express');
 let app = express();
 
