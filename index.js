@@ -9,7 +9,7 @@ app.get("/", function (req, res) {
     res.render("home");
 });
 
-app.listen(8181, function (erro) {
+app.listen(3000, function (erro) {
     if (erro) {
         console.log('Houve um erro na inicialização');
     } else {
