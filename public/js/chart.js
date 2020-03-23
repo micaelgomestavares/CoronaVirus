@@ -7,6 +7,10 @@ let cases;
 let deaths;
 let recovered;
 
+//Para mudar as bandeiras dos países.
+let countryName;
+let countryFlag;
+
 // Váriavel que guarda o gráfico criado.
 var myChart;
 
@@ -16,6 +20,22 @@ let tam = 0;
 $(document).ready(function () {
     catchD();
 });
+
+function catchCountryID() {
+    fetch(`https://restcountries.eu/rest/v2/name/${countryName}`).then(response => {
+        return response.json();
+    }).then(function (response) {
+        let flag = response.filter(flag => flag.name === text)[0];
+
+        countryFlag = `https://www.countryflags.io/${flag.alpha2Code}/flat/64.png`;
+
+        let container = document.getElementById("img-pais");
+        container.innerHTML = `<img src="${countryFlag}" class="float-right">`;
+        
+    }).catch(function (error) {
+        console.log("Houve um erro ao tentar localizar o ALPHA2CODE");
+    });
+}
 
 function catchD() {
     select = document.getElementById("countrypicker");
@@ -53,16 +73,19 @@ function onClick() {
 
         let country = response.filter(country => country.country === text)[0];
 
+        countryName = country.country;
         cases = country.cases;
         deaths = country.deaths;
         recovered = country.recovered;
 
         tam++;
-
         if (tam >= 2) {
             myChart.destroy();
         }
+
         createChart();
+        catchCountryID();
+
 
 
     }).catch(function (error) {
