@@ -52,7 +52,7 @@ function onClick() {
     }).then(function (response) {
 
         let country = response.filter(country => country.country === text)[0];
-        
+
         cases = country.cases;
         deaths = country.deaths;
         recovered = country.recovered;
@@ -68,7 +68,7 @@ function onClick() {
     }).catch(function (error) {
         console.log("Ocorreu um erro, não conseguimos pegar os dados corretamente.")
         console.log(error);
-        alert("OOPS.. País sem casos!");
+        $('.toast').toast('show');
     });
 }
 

@@ -2,8 +2,11 @@
 
 <body>
     <div class="container">
-        <select id="countrypicker" onchange="catchD()" class="selectpicker countrypicker mt-5"
-            data-default="BR"></select>
+
+        <select id="countrypicker" onchange="catchD()" class="selectpicker countrypicker mt-5" data-default="BR">
+
+        </select>
+
 
         <div class="card mt-2">
 
@@ -14,11 +17,27 @@
             <div class="card-footer text-muted text-center">
                 Fique em quarentena, tome cuidado e não saia de casa pela sua própria saúde ~Micael
                 <a href="https://twitter.com/MicaelEffects"><i class="fab fa-twitter ml-3 mt-2"></i></a>
-                <a href="github.com/Micazera"><i class="fab fa-github"></i></a>
-                <a href="instagram.com/micagomes.js/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Micazera"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/micagomes.js/"><i class="fab fa-instagram"></i></a>
             </div>
-            
         </div>
+
+        <div class="toast mt-3 mr-3" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000"
+            data-autohide="true" style="position: absolute; top: 0; right: 0;">
+
+            <div class="toast-header bg-success">
+                <strong class="mr-auto text-white">Algo de bom!</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                
+            </div>
+
+            <div class="toast-body">
+                Este país não possui casos no momento, comemore por eles!
+            </div>
+        </div>
+
     </div>
 </body>
 <%- include('partials/footer.ejs') %>
