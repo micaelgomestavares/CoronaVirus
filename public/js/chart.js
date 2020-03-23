@@ -68,7 +68,7 @@ function onClick() {
     }).catch(function (error) {
         console.log("Ocorreu um erro, não conseguimos pegar os dados corretamente.")
         console.log(error);
-        $('.toast').toast('show');
+        $('#toasthome').toast('show');
     });
 }
 
