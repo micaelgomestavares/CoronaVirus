@@ -33,9 +33,10 @@ function catchCountryID() {
 
         let container = document.getElementById("img-pais");
         container.src = `${countryFlag}`;
-        
+
     }).catch(function (error) {
         console.log("Houve um erro ao tentar localizar o ALPHA2CODE");
+        container.src = `img/coronavirus.png`;
     });
 }
 
