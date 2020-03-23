@@ -3,16 +3,18 @@
 <body>
     <div class="container">
 
-        <select id="countrypicker" onchange="catchD()" class="selectpicker countrypicker mt-5" data-default="BR">
+        <select id="countrypicker" onchange="catchD()" class="selectpicker countrypicker mt-5"
+            data-default="BR"></select>
 
-        </select>
-
-
+        <!--Card do gráfico-->
         <div class="card mt-2">
-
             <div class="card-body">
-                <img id="img-pais" width="64px" height="64px" src="https://www.countryflags.io/br/flat/64.png" class="float-right">
+
+                <img id="img-pais" width="64px" height="64px" src="https://www.countryflags.io/br/flat/64.png"
+                    class="float-right">
+
                 <canvas id="myChart" class="mt-5" style="position: relative; height:60vh; width:80vw"></canvas>
+
             </div>
 
             <div class="card-footer text-muted text-center">
@@ -24,6 +26,7 @@
             </div>
         </div>
 
+        <!--Toast caso aconteça algum erro-->
         <div id="toasthome" class="toast mt-3 mr-3" role="alert" aria-live="assertive" aria-atomic="true"
             data-delay="5000" data-autohide="true" style="position: absolute; top: 0; right: 0;">
 

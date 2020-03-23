@@ -6,6 +6,7 @@ let text;
 let cases;
 let deaths;
 let recovered;
+let todayCases;
 
 //Para mudar as bandeiras dos países.
 let countryName;
@@ -51,19 +52,19 @@ function createChart() {
     myChart = new Chart(document.getElementById("myChart"), {
         type: 'doughnut',
         data: {
-            labels: [`Casos Totais`, `Pessoas Mortas`, `Curadas`],
+            labels: [`Casos Totais`, `Pessoas Mortas`, `Curadas`, `Casos Hoje`],
             datasets: [
                 {
                     label: "Casos",
-                    backgroundColor: ["#3e95cd", "#1C1C1C", "#00ff7f"],
-                    data: [cases, deaths, recovered]
+                    backgroundColor: ["#3e95cd", "#1C1C1C", "#00ff7f", "#bd353b"],
+                    data: [cases, deaths, recovered, todayCases]
                 }
             ]
         },
         options: {
             title: {
                 display: true,
-                text: 'Relação de casos, pessoas mortas e as curadas.'
+                text: 'Relação de casos, pessoas mortas, curadas e casos do dia.'
             }
         }
     });
@@ -80,6 +81,7 @@ function onClick() {
         cases = country.cases;
         deaths = country.deaths;
         recovered = country.recovered;
+        todayCases = country.todayCases;
 
         tam++;
         if (tam >= 2) {
