@@ -78,6 +78,9 @@ function onClick() {
         const countryInfos = () => { country.country, country.cases, country.deaths, country.recovered, country.todayCases }
         console.log(countryInfos);
 
+        const countryInfos2 = tel => country.tel
+        console.log(countryInfos2(cases));
+
         countryName = country.country;
         cases = country.cases;
         deaths = country.deaths;
