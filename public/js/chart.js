@@ -77,6 +77,9 @@ function onClick() {
 
         let country = response.filter(country => country.country === text)[0];
 
+        const countryInfos = () => { country.country, country.cases, country.deaths, country.recovered, country.todayCases }
+        console.log(countryInfos);
+
         countryName = country.country;
         cases = country.cases;
         deaths = country.deaths;
@@ -84,6 +87,7 @@ function onClick() {
         todayCases = country.todayCases;
 
         tam++;
+
         if (tam >= 2) {
             myChart.destroy();
         }
