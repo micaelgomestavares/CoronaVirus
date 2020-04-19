@@ -30,8 +30,6 @@ function catchCountryID() {
 
         countryFlag = `https://www.countryflags.io/${flag.alpha2Code}/flat/64.png`;
 
-        console.log(countryFlag);
-
         let container = document.getElementById("img-pais");
         container.src = `${countryFlag}`;
 
