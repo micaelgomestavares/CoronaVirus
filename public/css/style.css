@@ -47,11 +47,6 @@ body {
     width: 100%;
 }
 
-.dropdown-menu>li.active>a {
-    color: #f4f4f4 !important;
-    background-color: #337ab7 !important;
-}
-
 .bootstrap-select .check-mark {
     line-height: 14px;
 }
