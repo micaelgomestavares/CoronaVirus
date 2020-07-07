@@ -22,12 +22,10 @@ $(document).ready(function () {
     catchD();
 });
 
-function numberFormatter(number) {
-    var number = Math.round(number * 100) / 100;
-    number.split('.');
-    number[0] = number[0].split(/(?=(?:...)*$)/).join('.');
-    return number[0];
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
+
 
 
 function catchCountryID() {
@@ -95,8 +93,8 @@ function onClick() {
         recovered = country.recovered;
         todayCases = country.todayCases;
 
-        console.log(numberFormatter(cases));
-        console.log(numberFormatter(country.cases));
+        console.log(formatNumber(cases));
+        console.log(formatNumber(country.cases));
 
         tam++;
 
