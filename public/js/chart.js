@@ -64,8 +64,7 @@ function createChart() {
                 labels: {
                     // This more specific font property overrides the global property
                     fontColor: 'white',
-                    fontFamily: 'Montserrat',
-                    borderColor: '#373757'
+                    fontFamily: 'Montserrat'
                 }
             }
         }
