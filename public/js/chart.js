@@ -107,7 +107,7 @@ function createChart() {
                     label: "Casos",
                     backgroundColor: [covidData[0].color, covidData[1].color, covidData[2].color, covidData[3].color],
                     borderColor: "#373757",
-                    data: [cases, deaths, recovered, todayCases]
+                    data: [covidData[0].cases, deaths, recovered, todayCases]
                 }
             ]
         },
