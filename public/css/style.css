@@ -1,5 +1,9 @@
 /* Classe para arrumar a section dos países pro BOOTSTRAP 4 */
 
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .dropdown-toggle.btn-default {
     color: #292b2c;
     background-color: #fff;

@@ -75,12 +75,6 @@ function onClick() {
 
         let country = response.filter(country => country.country === text)[0];
 
-        const countryInfos = () => { country.country, country.cases, country.deaths, country.recovered, country.todayCases }
-        console.log(countryInfos);
-
-        const countryInfos2 = info => country.info
-        console.log(countryInfos2(cases));
-
         countryName = country.country;
         cases = country.cases;
         deaths = country.deaths;
