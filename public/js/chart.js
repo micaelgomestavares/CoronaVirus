@@ -22,11 +22,6 @@ $(document).ready(function () {
     catchD();
 });
 
-function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g);
-}
-
-
 function catchCountryID() {
     fetch(`https://restcountries.eu/rest/v2/name/${countryName}`).then(response => {
         return response.json();
@@ -67,6 +62,13 @@ function createChart() {
             ]
         },
         options: {
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    }
+                }
+            },
             legend: {
                 labels: {
                     // This more specific font property overrides the global property
