@@ -94,8 +94,6 @@ function onClick() {
         recovered = country.recovered;
         todayCases = country.todayCases;
 
-        console.log(formatNumber(country.cases));
-
         tam++;
 
         if (tam >= 2) {
