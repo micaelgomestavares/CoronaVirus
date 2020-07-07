@@ -18,6 +18,22 @@ var myChart;
 // Váriavel para desbugar os gráficos
 let amount = 0;
 
+let covidData = [
+    {
+        color: "#3e95cd"
+    },
+    {
+        color: "#1C1C1C"
+    },
+    {
+        color: "#00ff7f"
+    },
+    {
+        color: "#bd353b"
+    }
+]
+
+
 $(document).ready(function () {
     catchD();
 });
@@ -77,24 +93,6 @@ function onClick() {
     });
 }
 
-let covidData = [
-    {
-        value: cases,
-        color: "#3e95cd"
-    },
-    {
-        value: deaths,
-        color: "#1C1C1C"
-    },
-    {
-        value: recovered,
-        color: "#00ff7f"
-    },
-    {
-        value: todayCases,
-        color: "#bd353b"
-    }
-]
 
 function createChart() {
     Chart.defaults.global.elements.rectangle.borderWidth = 0;
