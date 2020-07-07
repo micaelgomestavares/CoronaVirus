@@ -23,9 +23,8 @@ $(document).ready(function () {
 });
 
 function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g);
 }
-
 
 
 function catchCountryID() {
@@ -63,7 +62,7 @@ function createChart() {
                     label: "Casos",
                     backgroundColor: ["#3e95cd", "#1C1C1C", "#00ff7f", "#bd353b"],
                     borderColor: "#373757",
-                    data: ["1.600.000", deaths, recovered, todayCases]
+                    data: [cases, deaths, recovered, todayCases]
                 }
             ]
         },
@@ -88,7 +87,7 @@ function onClick() {
         let country = response.filter(country => country.country === text)[0];
 
         countryName = country.country;
-        cases = formatNumber(country.cases);
+        cases = country.cases;
         deaths = country.deaths;
         recovered = country.recovered;
         todayCases = country.todayCases;
