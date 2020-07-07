@@ -35,7 +35,6 @@ body {
     color: white;
     text-align: inherit;
     white-space: nowrap;
-    background: 0 0;
     text-decoration: none;
 }
 
@@ -61,7 +60,6 @@ body {
     text-overflow: ellipsis;
 }
 
-/* Make filled out selects be the same size as empty selects */
 
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
     display: inline !important;
