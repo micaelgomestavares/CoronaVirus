@@ -121,8 +121,12 @@ function createChart() {
             }
         },
         animation: {
-            onProgress: function (animation) {
-                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+            tension: {
+                duration: 1000,
+                easing: 'linear',
+                from: 1,
+                to: 0,
+                loop: true
             }
         }
     });
