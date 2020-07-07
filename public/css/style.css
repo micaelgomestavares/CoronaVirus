@@ -28,7 +28,7 @@ body {
     padding: 2px 1.3rem;
     clear: both;
     font-weight: 400;
-    color: #292b2c;
+    color: #fff;
     text-align: inherit;
     white-space: nowrap;
     background: 0 0;
@@ -44,7 +44,7 @@ body {
 }
 
 .dropdown-menu>li.active>a {
-    color: #f1f1f1 !important;
+    color: #373757 !important;
     background-color: #337ab7 !important;
 }
 
