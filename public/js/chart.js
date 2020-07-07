@@ -22,6 +22,13 @@ $(document).ready(function () {
     catchD();
 });
 
+function numberFormatter(number) {
+    var number = number.toFixed(2).split('.');
+    number[0] = number[0].split(/(?=(?:...)*$)/).join('.');
+    return number.join(',');
+}
+
+
 function catchCountryID() {
     fetch(`https://restcountries.eu/rest/v2/name/${countryName}`).then(response => {
         return response.json();
@@ -81,11 +88,11 @@ function onClick() {
 
         let country = response.filter(country => country.country === text)[0];
 
-        countryName = country.country;
-        cases = country.cases;
-        deaths = country.deaths;
-        recovered = country.recovered;
-        todayCases = country.todayCases;
+        countryName = numberFormatter(country.country);
+        cases = numberFormatter(country.cases);
+        deaths = numberFormatter(country.deaths);
+        recovered = numberFormatter(country.recovered);
+        todayCases = numberFormatter(country.todayCases);
 
         tam++;
 
