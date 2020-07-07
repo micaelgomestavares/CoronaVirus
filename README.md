@@ -1,5 +1,3 @@
-http://coronavirusmeter-com-br.umbler.net/
-
 ## 📦 Dependencies
 ```
 EXPRESS
