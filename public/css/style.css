@@ -22,6 +22,10 @@ body {
     display: none;
 }
 
+.bootstrap-select>.dropdown-menu>.dropdown-menu li {
+    background-color: #373757;
+}
+
 .bootstrap-select>.dropdown-menu>.dropdown-menu li a {
     display: block;
     width: 100%;
@@ -29,7 +33,6 @@ body {
     clear: both;
     font-weight: 400;
     color: white;
-    background-color: #373757;
     text-align: inherit;
     white-space: nowrap;
     background: 0 0;
