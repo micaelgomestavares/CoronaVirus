@@ -67,7 +67,8 @@ function createChart() {
             legend: {
                 labels: {
                     // This more specific font property overrides the global property
-                    fontColor: 'white'
+                    fontColor: 'white',
+                    fontFamily: 'Montserrat'
                 }
             }
         }
