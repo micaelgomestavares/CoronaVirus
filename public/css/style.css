@@ -11,7 +11,7 @@ body {
 .dropdown-toggle.btn-default {
     color: #fff;
     background-color: #373757;
-    border-color: #ccc;
+    border-color: #373757;
 }
 
 .bootstrap-select.show>.dropdown-menu>.dropdown-menu {
@@ -32,7 +32,6 @@ body {
     text-align: inherit;
     white-space: nowrap;
     background: 0 0;
-    border: 0;
     text-decoration: none;
 }
 
