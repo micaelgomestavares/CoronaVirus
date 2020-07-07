@@ -94,7 +94,7 @@ function onClick() {
         recovered = country.recovered;
         todayCases = country.todayCases;
 
-        console.log(cases);
+        console.log(numberFormatter(cases));
 
         tam++;
 
