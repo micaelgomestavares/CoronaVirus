@@ -16,7 +16,7 @@ let countryFlag;
 var myChart;
 
 // Váriavel para desbugar os gráficos
-let tam = 0;
+let amount = 0;
 
 $(document).ready(function () {
     catchD();
@@ -51,7 +51,7 @@ function createChart() {
     myChart = new Chart(document.getElementById("myChart"), {
         type: 'doughnut',
         data: {
-            labels: [`Casos Totais`, `Pessoas Mortas`, `Curadas`, `Casos Hoje`],
+            labels: [`Casos Totais`, `Mortes`, `Curadas`, `Casos Hoje`],
             datasets: [
                 {
                     label: "Casos",
@@ -64,7 +64,6 @@ function createChart() {
         options: {
             legend: {
                 labels: {
-                    // This more specific font property overrides the global property
                     fontColor: 'white',
                     fontFamily: 'Montserrat',
                     borderColor: 'black'
@@ -87,16 +86,14 @@ function onClick() {
         recovered = country.recovered;
         todayCases = country.todayCases;
 
-        tam++;
+        amount++;
 
-        if (tam >= 2) {
+        if (amount >= 2) {
             myChart.destroy();
         }
 
         createChart();
         catchCountryID();
-
-
 
     }).catch(function (error) {
         console.log("Ocorreu um erro, não conseguimos pegar os dados corretamente.")
