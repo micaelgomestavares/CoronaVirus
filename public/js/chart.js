@@ -63,6 +63,12 @@ function createChart() {
             title: {
                 display: true,
                 text: 'Relação de casos, pessoas mortas, curadas e casos do dia.'
+            },
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    fontColor: 'white'
+                }
             }
         }
     });
