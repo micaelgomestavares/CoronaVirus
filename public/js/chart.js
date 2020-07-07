@@ -63,7 +63,7 @@ function createChart() {
                     label: "Casos",
                     backgroundColor: ["#3e95cd", "#1C1C1C", "#00ff7f", "#bd353b"],
                     borderColor: "#373757",
-                    data: [cases, deaths, recovered, todayCases]
+                    data: ["1.600.000", deaths, recovered, todayCases]
                 }
             ]
         },
