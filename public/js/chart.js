@@ -18,7 +18,6 @@ var myChart;
 // Váriavel para desbugar os gráficos
 let amount = 0;
 
-let testData = []
 
 let covidData = [
     {
@@ -78,18 +77,6 @@ function onClick() {
         deaths = country.deaths;
         recovered = country.recovered;
         todayCases = country.todayCases;
-
-        testData[0] = country.country;
-        testData[1] = country.cases;
-        testData[2] = country.deaths;
-        testData[3] = country.recovered;
-        testData[4] = country.todayCases;
-
-        console.log(testData[0]);
-        console.log(testData[1]);
-        console.log(testData[2]);
-        console.log(testData[3]);
-        console.log(testData[4]);
 
         amount++;
 
