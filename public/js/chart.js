@@ -64,7 +64,7 @@ function createChart() {
                     label: "Casos",
                     backgroundColor: ["#3e95cd", "#1C1C1C", "#00ff7f", "#bd353b"],
                     borderColor: "#373757",
-                    data: [cases, deaths, recovered, todayCases]
+                    data: [numberFormatter(cases), deaths, recovered, todayCases]
                 }
             ]
         },
@@ -88,11 +88,11 @@ function onClick() {
 
         let country = response.filter(country => country.country === text)[0];
 
-        countryName = numberFormatter(country.country);
-        cases = numberFormatter(country.cases);
-        deaths = numberFormatter(country.deaths);
-        recovered = numberFormatter(country.recovered);
-        todayCases = numberFormatter(country.todayCases);
+        countryName = country.country;
+        cases = country.cases;
+        deaths = country.deaths;
+        recovered = country.recovered;
+        todayCases = country.todayCases;
 
         tam++;
 
