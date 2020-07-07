@@ -18,6 +18,8 @@ var myChart;
 // Váriavel para desbugar os gráficos
 let amount = 0;
 
+let testData = []
+
 let covidData = [
     {
         color: "#3e95cd"
@@ -76,6 +78,10 @@ function onClick() {
         deaths = country.deaths;
         recovered = country.recovered;
         todayCases = country.todayCases;
+
+        testData[0] = country.country;
+
+        console.log(testData[0]);
 
         amount++;
 
