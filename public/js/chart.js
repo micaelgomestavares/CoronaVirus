@@ -107,7 +107,7 @@ function createChart() {
                     label: "Casos",
                     backgroundColor: [covidData[0].color, covidData[1].color, covidData[2].color, covidData[3].color],
                     borderColor: "#373757",
-                    data: [covidData[0].value, deaths, recovered, todayCases]
+                    data: [cases, deaths, recovered, todayCases]
                 }
             ]
         },
@@ -118,15 +118,15 @@ function createChart() {
                     fontFamily: 'Montserrat',
                     borderColor: 'black'
                 }
-            }
-        },
-        animation: {
-            tension: {
-                duration: 1000,
-                easing: 'linear',
-                from: 1,
-                to: 0,
-                loop: true
+            },
+            animation: {
+                tension: {
+                    duration: 1000,
+                    easing: 'linear',
+                    from: 1,
+                    to: 0,
+                    loop: true
+                }
             }
         }
     });
