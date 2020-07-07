@@ -46,7 +46,7 @@ body {
 }
 
 .dropdown-menu>li.active>a {
-    color: #fff !important;
+    color: black !important;
     background-color: #337ab7 !important;
 }
 
