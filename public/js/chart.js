@@ -62,13 +62,6 @@ function createChart() {
             ]
         },
         options: {
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-                    }
-                }
-            },
             legend: {
                 labels: {
                     // This more specific font property overrides the global property
