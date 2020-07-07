@@ -75,9 +75,9 @@ function createChart() {
             datasets: [
                 {
                     label: "Casos",
-                    backgroundColor: [covidData[0].color, "#1C1C1C", "#00ff7f", "#bd353b"],
+                    backgroundColor: [covidData[0].color, covidData[1].color, covidData[2].color, covidData[3].color],
                     borderColor: "#373757",
-                    data: [cases, deaths, recovered, todayCases]
+                    data: [covidData[0].value, deaths, recovered, todayCases]
                 }
             ]
         },
