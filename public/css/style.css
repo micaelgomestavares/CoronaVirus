@@ -9,7 +9,7 @@ body {
 }
 
 .dropdown-toggle.btn-default {
-    color: #373757;
+    color: #fff;
     background-color: #373757;
     border-color: #373757;
 }
@@ -28,7 +28,7 @@ body {
     padding: 2px 1.3rem;
     clear: both;
     font-weight: 400;
-    color: #373757;
+    color: #292b2c;
     text-align: inherit;
     white-space: nowrap;
     background: 0 0;
@@ -36,7 +36,7 @@ body {
 }
 
 .bootstrap-select>.dropdown-menu>.dropdown-menu li a:hover {
-    background-color: #373757;
+    background-color: #f4f4f4;
 }
 
 .bootstrap-select>.dropdown-toggle {
@@ -44,7 +44,7 @@ body {
 }
 
 .dropdown-menu>li.active>a {
-    color: #373757 !important;
+    color: #f1f1f1 !important;
     background-color: #337ab7 !important;
 }
 
