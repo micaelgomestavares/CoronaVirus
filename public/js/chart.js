@@ -47,6 +47,7 @@ function catchD() {
 }
 
 function createChart() {
+    Chart.defaults.global.elements.rectangle.borderWidth = 0;
     myChart = new Chart(document.getElementById("myChart"), {
         type: 'doughnut',
         data: {
