@@ -23,7 +23,8 @@ $(document).ready(function () {
 });
 
 function numberFormatter(number) {
-    var number = number.toFixed(2).split('.');
+    var number = Math.round(number * 100) / 100;
+    number.split('.');
     number[0] = number[0].split(/(?=(?:...)*$)/).join('.');
     return number[0];
 }
@@ -89,7 +90,7 @@ function onClick() {
         let country = response.filter(country => country.country === text)[0];
 
         countryName = country.country;
-        cases = numberFormatter(country.cases);
+        cases = country.cases;
         deaths = country.deaths;
         recovered = country.recovered;
         todayCases = country.todayCases;
