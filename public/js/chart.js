@@ -25,7 +25,7 @@ $(document).ready(function () {
 function numberFormatter(number) {
     var number = number.toFixed(2).split('.');
     number[0] = number[0].split(/(?=(?:...)*$)/).join('.');
-    return number;
+    return number[0];
 }
 
 
