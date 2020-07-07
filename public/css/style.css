@@ -9,7 +9,7 @@ body {
 }
 
 .dropdown-toggle.btn-default {
-    color: #fff;
+    color: #373757;
     background-color: #373757;
     border-color: #373757;
 }
@@ -28,7 +28,7 @@ body {
     padding: 2px 1.3rem;
     clear: both;
     font-weight: 400;
-    color: #fff;
+    color: #373757;
     text-align: inherit;
     white-space: nowrap;
     background: 0 0;
