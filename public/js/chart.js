@@ -46,6 +46,26 @@ function catchD() {
     onClick();
 }
 
+let covidData = [
+    {
+        value: cases,
+        color: "#3e95cd"
+    },
+    {
+        value: deaths,
+        color: "#1C1C1C"
+    },
+    {
+        value: recovered,
+        color: "#00ff7f"
+    },
+    {
+        value: todayCases,
+        color: "#bd353b"
+    }
+
+]
+
 function createChart() {
     Chart.defaults.global.elements.rectangle.borderWidth = 0;
     myChart = new Chart(document.getElementById("myChart"), {
@@ -68,6 +88,11 @@ function createChart() {
                     fontFamily: 'Montserrat',
                     borderColor: 'black'
                 }
+            }
+        },
+        animation: {
+            onProgress: function (animation) {
+                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
             }
         }
     });
