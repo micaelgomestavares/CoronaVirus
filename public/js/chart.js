@@ -22,6 +22,15 @@ $(document).ready(function () {
     catchD();
 });
 
+
+function catchD() {
+    select = document.getElementById("countrypicker");
+    value = select.options[select.selectedIndex].value;
+    text = select.options[select.selectedIndex].text;
+    onClick();
+}
+
+
 function catchCountryID() {
     fetch(`https://restcountries.eu/rest/v2/name/${countryName}`).then(response => {
         return response.json();
@@ -36,65 +45,6 @@ function catchCountryID() {
     }).catch(function (error) {
         console.log(`Houve um erro ao tentar localizar o Alphs2Code do país: ${countryName}`);
         container.src = `img/coronavirus.png`;
-    });
-}
-
-function catchD() {
-    select = document.getElementById("countrypicker");
-    value = select.options[select.selectedIndex].value;
-    text = select.options[select.selectedIndex].text;
-    onClick();
-}
-
-let covidData = [
-    {
-        value: cases,
-        color: "#3e95cd"
-    },
-    {
-        value: deaths,
-        color: "#1C1C1C"
-    },
-    {
-        value: recovered,
-        color: "#00ff7f"
-    },
-    {
-        value: todayCases,
-        color: "#bd353b"
-    }
-
-]
-
-function createChart() {
-    Chart.defaults.global.elements.rectangle.borderWidth = 0;
-    myChart = new Chart(document.getElementById("myChart"), {
-        type: 'doughnut',
-        data: {
-            labels: [`Casos Totais`, `Mortes`, `Curadas`, `Casos Hoje`],
-            datasets: [
-                {
-                    label: "Casos",
-                    backgroundColor: [covidData[0].color, covidData[1].color, covidData[2].color, covidData[3].color],
-                    borderColor: "#373757",
-                    data: [covidData[0].value, deaths, recovered, todayCases]
-                }
-            ]
-        },
-        options: {
-            legend: {
-                labels: {
-                    fontColor: 'white',
-                    fontFamily: 'Montserrat',
-                    borderColor: 'black'
-                }
-            }
-        },
-        animation: {
-            onProgress: function (animation) {
-                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
-            }
-        }
     });
 }
 
@@ -127,3 +77,53 @@ function onClick() {
     });
 }
 
+let covidData = [
+    {
+        value: cases,
+        color: "#3e95cd"
+    },
+    {
+        value: deaths,
+        color: "#1C1C1C"
+    },
+    {
+        value: recovered,
+        color: "#00ff7f"
+    },
+    {
+        value: todayCases,
+        color: "#bd353b"
+    }
+]
+
+function createChart() {
+    Chart.defaults.global.elements.rectangle.borderWidth = 0;
+    myChart = new Chart(document.getElementById("myChart"), {
+        type: 'doughnut',
+        data: {
+            labels: [`Casos Totais`, `Mortes`, `Curadas`, `Casos Hoje`],
+            datasets: [
+                {
+                    label: "Casos",
+                    backgroundColor: [covidData[0].color, covidData[1].color, covidData[2].color, covidData[3].color],
+                    borderColor: "#373757",
+                    data: [cases, deaths, recovered, todayCases]
+                }
+            ]
+        },
+        options: {
+            legend: {
+                labels: {
+                    fontColor: 'white',
+                    fontFamily: 'Montserrat',
+                    borderColor: 'black'
+                }
+            }
+        },
+        animation: {
+            onProgress: function (animation) {
+                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+            }
+        }
+    });
+}
