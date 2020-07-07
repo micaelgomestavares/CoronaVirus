@@ -1,6 +1,8 @@
 <%- include('partials/header.ejs') %>
 
 <body>
+
+
     <div class="container">
 
         <select id="countrypicker" onchange="catchD()" class="selectpicker countrypicker mt-5"
@@ -13,7 +15,7 @@
                 <img id="img-pais" width="64px" height="64px" src="https://www.countryflags.io/br/flat/64.png"
                     class="float-right">
 
-                <canvas id="myChart" class="mt-5" style="position: relative; height:60vh; width:80vw"></canvas>
+                <canvas id="myChart" class="mt-5" style="position: relative; min-height:60vh; min-width:80vw; max-height:60vh; max-width:80vw"></canvas>
 
             </div>
 
