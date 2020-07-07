@@ -2,6 +2,8 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
+    background-color: #1f1f31;
+    color: white;
 }
 
 .dropdown-toggle.btn-default {
