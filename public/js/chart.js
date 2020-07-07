@@ -89,7 +89,7 @@ function onClick() {
         let country = response.filter(country => country.country === text)[0];
 
         countryName = country.country;
-        cases = country.cases;
+        cases = numberFormatter(country.cases);
         deaths = country.deaths;
         recovered = country.recovered;
         todayCases = country.todayCases;
