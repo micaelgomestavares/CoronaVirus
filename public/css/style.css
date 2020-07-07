@@ -1,9 +1,20 @@
-/* Classe para arrumar a section dos países pro BOOTSTRAP 4 */
-
 * {
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
     background-color: #1f1f31;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+.cardstyle {
+    background-color: #373757;
+    border-radius: 10px;
 }
