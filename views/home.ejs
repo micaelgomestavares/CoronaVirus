@@ -3,13 +3,13 @@
 <body>
     <div class="container">
 
-        <section style="margin-bottom: 10px;">
+        <section style="margin-bottom: 15px;">
             <select id="countrypicker" onchange="catchD()" class="selectpicker countrypicker mt-5"
                 data-default="BR"></select>
 
             <section class="float-right">
-                <button class="btn btn-success mt-5" style="max-height: 50px;">Comparar com &nbsp; <i
-                        class="fas fa-exchange-alt"></i>
+                <button class="btn btn-success mt-5" style="max-height: 50px;  border: 5px solid #2aa547">Comparar com
+                    &nbsp; <i class="fas fa-exchange-alt"></i>
                 </button>
                 <select class="selectpicker countrypicker compareselect mt-5" data-default="BR"></select>
             </section>
@@ -17,22 +17,21 @@
 
         <!--Card do gráfico-->
         <div class="card cardstyle mt-2">
-            <div class="card-body">
 
+            <div class="card-body">
                 <img id="img-pais" width="64px" height="64px" src="https://www.countryflags.io/br/flat/64.png"
                     class="float-right">
 
                 <canvas id="myChart" class="mt-5"></canvas>
-
             </div>
 
             <div class="card-footer text-muted text-center">
-                <p>Fique em quarentena, tome cuidado e não saia de casa pela sua própria saúde
-                    ~Micael</p>
+                <p>Fique em quarentena, tome cuidado e não saia de casa pela sua própria saúde</p>
                 <a href="https://twitter.com/MicaelEffects"><i class="fab fa-twitter ml-3 mt-2"></i></a>
                 <a href="https://github.com/Micazera"><i class="fab fa-github"></i></a>
                 <a href="https://instagram.com/micagomes.js/"><i class="fab fa-instagram"></i></a>
             </div>
+
         </div>
 
         <!--Toast caso aconteça algum erro-->
