@@ -24,7 +24,7 @@
     padding: 2px 1.3rem;
     clear: both;
     font-weight: 400;
-    color: white;
+    color: #fff;
     text-align: inherit;
     white-space: nowrap;
     text-decoration: none;
@@ -40,11 +40,6 @@
 
 .bootstrap-select .check-mark {
     line-height: 14px;
-}
-
-.bootstrap-select .check-mark::after {
-    font-family: "FontAwesome";
-    content: "\f00c";
 }
 
 .bootstrap-select button {
