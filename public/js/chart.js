@@ -52,15 +52,13 @@ const getCountriesFlags = () => {
         return response.json();
     }).then(function (response) {
         let flag = response.filter(flag => flag.name === text)[0];
-
         countryFlag = `https://www.countryflags.io/${flag.alpha2Code}/flat/64.png`;
 
         let container = document.getElementById("img-pais");
         container.src = `${countryFlag}`;
 
     }).catch(function (error) {
-        console.log(`Houve um erro ao tentar localizar o Alpha2Code do país: ${countryName}`);
-        container.src = `../public/img/coronavirus.png`;
+        console.log(`Houve um erro ao tentar localizar o Alpha2Code do país: ${countryName}`, error);
     });
 }
 
