@@ -40,15 +40,14 @@ $(document).ready(function () {
 });
 
 
-function catchD() {
+const catchD = () => {
     select = document.getElementById("countrypicker");
     value = select.options[select.selectedIndex].value;
     text = select.options[select.selectedIndex].text;
-    onClick();
+    getCovidInformations();
 }
 
-
-function catchCountryID() {
+const getCountriesFlags = () => {
     fetch(`https://restcountries.eu/rest/v2/name/${countryName}`).then(response => {
         return response.json();
     }).then(function (response) {
@@ -60,12 +59,12 @@ function catchCountryID() {
         container.src = `${countryFlag}`;
 
     }).catch(function (error) {
-        console.log(`Houve um erro ao tentar localizar o Alphs2Code do país: ${countryName}`);
-        container.src = `img/coronavirus.png`;
+        console.log(`Houve um erro ao tentar localizar o Alpha2Code do país: ${countryName}`);
+        container.src = `../public/img/coronavirus.png`;
     });
 }
 
-function onClick() {
+const getCovidInformations = () => {
     fetch("https://coronavirus-19-api.herokuapp.com/countries").then(response => {
         return response.json();
     }).then(function (response) {
@@ -85,7 +84,7 @@ function onClick() {
         }
 
         createChart();
-        catchCountryID();
+        getCountriesFlags();
 
     }).catch(function (error) {
         console.log("Ocorreu um erro, não conseguimos pegar os dados corretamente.")
@@ -95,7 +94,7 @@ function onClick() {
 }
 
 
-function createChart() {
+const createChart = () => {
     Chart.defaults.global.elements.rectangle.borderWidth = 0;
     myChart = new Chart(document.getElementById("myChart"), {
         type: 'doughnut',
