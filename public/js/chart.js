@@ -36,11 +36,11 @@ let covidData = [
 
 
 $(document).ready(function () {
-    catchD();
+    getPickersInfo();
 });
 
 
-const catchD = () => {
+const getPickersInfo = () => {
     select = document.getElementById("countrypicker");
     value = select.options[select.selectedIndex].value;
     text = select.options[select.selectedIndex].text;
@@ -90,7 +90,6 @@ const getCovidInformations = () => {
         $('#toasthome').toast('show');
     });
 }
-
 
 const createChart = () => {
     Chart.defaults.global.elements.rectangle.borderWidth = 0;

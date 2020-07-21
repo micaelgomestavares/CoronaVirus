@@ -13,8 +13,6 @@ app.get("/", function (req, res) {
 app.listen(process.env.PORT || 3000, function (erro) {
     if (erro) {
         console.log('Houve um erro na inicialização');
-    } else {
-        console.log('Não houve nenhum erro na inicizalização');
     }
 });
 
