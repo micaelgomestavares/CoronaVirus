@@ -101,7 +101,7 @@ const createChart = () => {
     myChart = new Chart(document.getElementById("myChart"), {
         type: 'doughnut',
         data: {
-            labels: [`Casos Totais`, `Mortes`, `Curadas`, `Casos Hoje`],
+            labels: [`Casos Totais`, `Mortes`, `Curadas`, `Casos Hoje`, 'Testes Totais'],
             datasets: [
                 {
                     label: "Casos",
