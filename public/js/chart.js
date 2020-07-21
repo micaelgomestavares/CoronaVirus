@@ -7,6 +7,7 @@ let cases;
 let deaths;
 let recovered;
 let todayCases;
+let totalTestes;
 
 //Para mudar as bandeiras dos países.
 let countryName;
@@ -31,6 +32,9 @@ let covidData = [
     },
     {
         color: "#bd353b"
+    },
+    {
+        color: "#dbcd09"
     }
 ]
 
@@ -74,6 +78,7 @@ const getCovidInformations = () => {
         deaths = country.deaths;
         recovered = country.recovered;
         todayCases = country.todayCases;
+        totalTestes = country.totalTests;
 
         amount++;
 
@@ -100,9 +105,9 @@ const createChart = () => {
             datasets: [
                 {
                     label: "Casos",
-                    backgroundColor: [covidData[0].color, covidData[1].color, covidData[2].color, covidData[3].color],
+                    backgroundColor: [covidData[0].color, covidData[1].color, covidData[2].color, covidData[3].color, covidData[4].color],
                     borderColor: "#373757",
-                    data: [cases, deaths, recovered, todayCases]
+                    data: [cases, deaths, recovered, todayCases, totalTestes]
                 }
             ]
         },
