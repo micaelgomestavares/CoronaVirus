@@ -55,3 +55,8 @@
     outline: none!important;
     border: 0;
 }
+
+.bootstrap-select a::selection {
+    outline: none!important;
+    border: 0;
+}
