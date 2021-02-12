@@ -51,7 +51,7 @@
     display: inline !important;
 }
 
-.bootstrap-select:focus {
+.bootstrap-select button:focus {
     outline: none;
     border: 0;
 }
