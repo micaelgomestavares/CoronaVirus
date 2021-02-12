@@ -50,3 +50,8 @@
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
     display: inline !important;
 }
+
+.bootstrap-select:focus {
+    outline: none;
+    border: 0;
+}
