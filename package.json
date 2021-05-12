@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap-select": "^1.13.12",
     "bootstrap-select-country": "^4.1.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "ejs": "^3.0.1",
     "express": "^4.17.1"
   },
