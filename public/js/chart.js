@@ -129,6 +129,7 @@ const createChart = () => {
                     loop: true
                 }
             }
+        
         }
     });
 }

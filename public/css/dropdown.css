@@ -4,6 +4,7 @@
     color: #fff;
     background-color: #373757;
     border-color: #373757;
+    outline: none;
 }
 
 .bootstrap-select.show>.dropdown-menu>.dropdown-menu {
@@ -28,6 +29,7 @@
     text-align: inherit;
     white-space: nowrap;
     text-decoration: none;
+    outline: none;
 }
 
 .bootstrap-select>.dropdown-menu>.dropdown-menu li a:hover {
@@ -36,6 +38,7 @@
 
 .bootstrap-select>.dropdown-toggle {
     width: 100%;
+
 }
 
 .bootstrap-select .check-mark {
@@ -49,6 +52,7 @@
 
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
     display: inline !important;
+    outline: none;
 }
 
 .bootstrap-select a:focus {
