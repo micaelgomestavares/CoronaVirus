@@ -1,5 +1,3 @@
-<a>cv-meter.herokuapp.com/</a>
-
 ## 📦 Dependencies
 ```
 EXPRESS
